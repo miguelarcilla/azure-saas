@@ -34,3 +34,36 @@ The onboarding flow of the SaaS Provider Web App is a series of steps which pers
 Upon entry of the first step of the onboarding flow (enter email address), the CreateController logic checks if an account exists with the given user name (email address).  If an account does not exist with the email address, an Identity account is created with just a user name.  Storing the email address allows for subsequent communication with the user in the case that they do not complete the onboarding flow.
 
 If the user does complete the onboarding flow, the final confirmation step will include a field to enter a password to complete their account creation.  
+
+
+## Getting Started With Development
+
+### Prerequisites
+- Visual Studio
+- .NET 6.0
+### Dependencies
+- Identity SQL Database (Soon to be deprecated)
+- Catalog SQL Database (Soon to be deprecated)
+- Admin API (Coming soon)
+- Identity Provider (B2C -- Coming Soon)
+
+
+### App Settings
+
+| Config Section | Setting Name | Description | Required | 
+| --- | --- | --- | --- |
+| AppSettings | RedirectUri | | false |
+| AppSettings | AdminApiBaseUrl | BaseUrl for the admin API. Not currently required but will be soon. | false |
+| AppSettings.Stripe | PublishableKey | | false |
+| AppSettings.Stripe | SecretKey | | false |
+| AppSettings.Stripe | ProductPlanSubscriberBasic | | false |
+| AppSettings.Stripe | ProductPlanSubscriberStandard | | false |
+| ConnectionStrings | CatalogDbConnection | Connection string to catalog database. Stores tenant information after onboarding. | true |
+| ConnectionStrings | IdentityDbConnection | Connection string to identity database that handles user auth | true |
+| ApplicationInsights | ConnectionString | Connection string for Azure Application Insights instance | false |
+
+### Setup
+1. Deploy or Setup dependencies (either locally or in azure)
+2. Gather required app settings from dependencies and insert into `appsettings.json`
+3. Build application, ensure it compiles
+4. You should now be able to launch a debug instance of the SignupAdmin app. 
