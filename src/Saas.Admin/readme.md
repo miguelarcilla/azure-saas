@@ -10,7 +10,7 @@ The SaaS Admin Service is an API that is reponsible for tenant management operat
 
 ## Project Overview
 
-For more information on this module, please the admin service page on our documentation site [here](https://azure.github.io/azure-saas/components/admin-service/).
+For more information on this module, please see the admin service page on our documentation site [here](https://azure.github.io/azure-saas/components/admin-service/).
 
 ## How to Run Locally
 
@@ -32,6 +32,8 @@ You must also have the following:
 
 ### App Settings
 
+Insert table of explanation of app settings here
+
 ### Starting the App
 
 1. Insert app settings marked as required (above) into appsettings.json
@@ -51,4 +53,6 @@ If, for your use case, you would like to deploy just this single module, you may
 2. [Create a resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-cli#create-resource-groups) in your preferred region
 
 <!-- TODO: Put instructions in for running bicep deploy -->
-3. Run bicep deploy command
+3. Run bicep deploy command(s)
+
+4. ....
