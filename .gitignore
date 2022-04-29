@@ -357,3 +357,6 @@ MigrationBackup/
 .hugo_build.lock
 docs/azure-saas-docs/resources/_gen
 docs/azure-saas-docs/public
+
+**/appsettings.json
+src/policy/Environments/*
