@@ -81,20 +81,20 @@ app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {
-                // admin
-                endpoints.MapControllerRoute(
+    // admin
+    endpoints.MapControllerRoute(
         name: "Admin",
-        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+        // default
+        endpoints.MapControllerRoute(name: SR.DefaultName, pattern: SR.MapControllerRoutePattern);
+        //if (env.IsDevelopment())
+        //{
+        //    routes.WithMetadata(new AllowAnonymousAttribute());
 
-                // default
-                endpoints.MapControllerRoute(name: SR.DefaultName, pattern: SR.MapControllerRoutePattern);
-                //if (env.IsDevelopment())
-                //{
-                //    routes.WithMetadata(new AllowAnonymousAttribute());
+        //}
 
-                //}
-
-                endpoints.MapRazorPages();
+        endpoints.MapRazorPages();
 });
 
 AppHttpContext.Services = ((IApplicationBuilder)app).ApplicationServices;

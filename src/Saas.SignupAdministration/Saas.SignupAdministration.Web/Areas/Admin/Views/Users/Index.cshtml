@@ -1,0 +1,33 @@
+﻿@using Saas.SignupAdministration.Web
+@model ICollection<string>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item, "Details", new { area = "Admin" })
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new {area = "Admin" } ) |
+                    @Html.ActionLink("Details", "Details", new { area = "Admin" }) |
+                    @Html.ActionLink("Delete", "Delete", new { area = "Admin" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

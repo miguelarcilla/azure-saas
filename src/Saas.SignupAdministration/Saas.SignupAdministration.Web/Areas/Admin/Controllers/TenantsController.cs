@@ -3,6 +3,7 @@
 namespace Saas.SignupAdministration.Web.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Controller]
 public class TenantsController : Controller
 {
     private readonly IAdminServiceClient _adminServiceClient;
